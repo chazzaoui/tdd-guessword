@@ -6,27 +6,38 @@ import App from './App';
 
 Enzyme.configure({ adapter: new EnzymeAdapter()});
 
+//Create shallow wrapper for the app component
+const setup = (props={}, state=null ) => {
+    return shallow(<App {...props}/> )
+}
 
+const findByTestAtt = (wrapper, val) => {
+    return wrapper.find(`[data-test="${val}"]`)
+}
 test('renders without error', () => {
- const wrapper = shallow(<App /> );
- const appComponent = wrapper.find("[data-test='component-app']")
+ const wrapper = setup();
+ const appComponent = findByTestAtt(wrapper,'component-app');
  expect(appComponent.length).toBe(1);
 });
 
 test('should render increment button', () => {
-    
+    const wrapper = setup();
+    const button = findByTestAtt(wrapper, 'counter-display');
+    expect(button.length).toBe(1);
 });
 
 test('should render counter', () => {
-    
+    const wrapper = setup();
+    const counterDisplay = findByTestAtt(wrapper, 'increment-button');
+    expect(counterDisplay.length).toBe(1);
 })
 
 test('counter should start at zero', () => {
-    
+   
 })
 
 test('should increment counter on click in display', () => {
-    
+   
 })
 
 
