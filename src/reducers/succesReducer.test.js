@@ -7,6 +7,6 @@ test('should return default state of false when no correct action is passed ', (
 });
 
 test('should return true when correct action is passed', () => {
-    const newState = succesReducer(undefined, {type:actionTypes.CORRECT_GUESS});
+    const newState = succesReducer(undefined, {type: actionTypes.CORRECT_GUESS});
     expect(newState).toBe(true);
 });
