@@ -33,7 +33,7 @@ describe("if there are no words guessed", () => {
     expect(component.length).toBe(1);
   });
   test("should render instructions", () => {
-    const instructions = findByTestAttr(wrapper, "component-instructions");
+    const instructions = findByTestAttr(wrapper, "guess-instructions");
     expect(instructions.text().length).not.toBe(0);
   });
 });

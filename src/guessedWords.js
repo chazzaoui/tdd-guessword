@@ -4,12 +4,12 @@ import Proptypes from "prop-types";
 const GuessedWords = (props) => {
   return (
     <div data-test="component-guessed-words">
-      {!props.guessedWords ? (
-        <span data-test="component-instructions">
+      {!props.guessedWords ? 
+        <span data-test="guess-instructions">
           Try to guess the secret word!
         </span>
-      ) : (
-        <div date-test="guessedWords">
+       : 
+        <div data-test="guessedWords">
             <h3>Guessed words</h3>
           <table className="table table-sm">
             <thead className='thead-light'>
@@ -29,7 +29,7 @@ const GuessedWords = (props) => {
             </tbody>
           </table>
         </div>
-      )}
+      }
     </div>
   );
 };

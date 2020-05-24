@@ -10,14 +10,6 @@ function App() {
       guessedWord: "train",
       letterMatchCount: 3,
     },
-    {
-      guessedWord: "house",
-      letterMatchCount: 2,
-    },
-    {
-      guessedWord: "travel",
-      letterMatchCount: 4,
-    },
   ];
 
   return (
