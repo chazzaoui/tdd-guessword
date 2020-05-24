@@ -3,6 +3,7 @@ import React from "react";
 import "./App.css";
 import GuessedWords from "./guessedWords";
 import Congrats from "./congrats";
+import Input from './input';
 
 function App() {
   const guessedWords = [
@@ -15,8 +16,9 @@ function App() {
   return (
     <div data-test="component-app" className="container">
       <h1>Jotto!</h1>
-      <Congrats success={true} />
+      <Congrats success={false} />
       <GuessedWords guessedWords={guessedWords} />
+      <Input />
     </div>
   );
 }
